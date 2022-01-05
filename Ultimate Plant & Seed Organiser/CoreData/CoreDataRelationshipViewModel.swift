@@ -21,6 +21,7 @@ class CoreDataRelationshipViewModel: ObservableObject {
     func getCategories() {
         
         let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         do {
             categoryList = try manager.context.fetch(request)
@@ -30,18 +31,21 @@ class CoreDataRelationshipViewModel: ObservableObject {
         
     }
     
-    func addCategory() {
+    func addCategory(categoryName: String) {
         
         let newCategory = CategoryEntity(context: manager.context)
         newCategory.id = UUID()
-        newCategory.name = "Category ID"
+        newCategory.name = categoryName
         
         save()
                 
     }
     
     func deleteCategory(category: CategoryEntity) {
-        self.manager.context.delete(category)
+        
+        manager.context.delete(category)
+        
+        save()
     }
     
     func save() {

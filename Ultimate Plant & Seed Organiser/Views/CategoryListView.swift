@@ -30,7 +30,6 @@ struct CategoryListView: View {
                         vm.deleteCategory(category: c)
                         vm.getCategories()
                     }
-                    
                 })
                
             }

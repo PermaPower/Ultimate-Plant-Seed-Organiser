@@ -12,12 +12,17 @@ struct AddCategoryView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var vm = CoreDataRelationshipViewModel()
-              
+    
+    @State var categoryName: String = ""
+
     var body: some View {
         NavigationView {
             VStack{
+                TextField("Enter Category Name", text: $categoryName)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
             Button {
-                vm.addCategory()
+                vm.addCategory(categoryName: categoryName)
                 presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Add Category")
