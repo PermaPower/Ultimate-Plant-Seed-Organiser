@@ -7,21 +7,27 @@
 
 import SwiftUI
 
-//** Need to refresh category list once new one is added **//
-
 struct AddCategoryView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @StateObject var vm = CoreDataRelationshipViewModel()
-  
+    @ObservedObject var vm = CoreDataRelationshipViewModel()
+              
     var body: some View {
         NavigationView {
+            VStack{
             Button {
                 vm.addCategory()
                 presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Add Category")
+            }
+            
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("Cancel")
+            }
             }
         }
         .navigationTitle("Add Category")

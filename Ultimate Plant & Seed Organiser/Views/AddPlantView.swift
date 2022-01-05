@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddPlantView: View {
     
-    @StateObject var vm = CoreDataRelationshipViewModel()
+    @ObservedObject var vm = CoreDataRelationshipViewModel()
     
     var body: some View {
         NavigationView {

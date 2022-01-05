@@ -10,21 +10,29 @@ import SwiftUI
 struct CategoryListView: View {
     
     @StateObject var vm = CoreDataRelationshipViewModel()
-                
+        
     @State var isAddPresented = false
     
     var body: some View {
         NavigationView{
             
             List {
-                ForEach(vm.categoryList, id: \.self) { cat in
+                ForEach(vm.categoryList, id: \.id) { cat in
                     NavigationLink {
                         PlantListView()
                     } label: {
                         Text(cat.name ?? "")
                     }
                 }
-                .onDelete(perform: delete)
+                .onDelete(perform: { indexSet in
+                    indexSet.forEach { index in
+                        let c = vm.categoryList[index]
+                        vm.deleteCategory(category: c)
+                        vm.getCategories()
+                    }
+                    
+                })
+               
             }
             .navigationTitle("Category")
             
@@ -35,7 +43,10 @@ struct CategoryListView: View {
                         self.isAddPresented = true
                     }
                     .sheet(isPresented: $isAddPresented,
-                           onDismiss: { self.isAddPresented = false }) {
+                           onDismiss: {
+                        self.isAddPresented = false
+                        vm.getCategories()
+                    }) {
                         AddCategoryView()
                     }
                     EditButton()
@@ -44,9 +55,7 @@ struct CategoryListView: View {
         }
     }
     
-    func delete(at offsets: IndexSet) {
-        vm.categoryList.remove(atOffsets: offsets)
-    }
+   
 }
 
 struct ContentView_Previews: PreviewProvider {

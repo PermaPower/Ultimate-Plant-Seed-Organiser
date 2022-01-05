@@ -11,6 +11,7 @@ import CoreData
 class CoreDataRelationshipViewModel: ObservableObject {
     
     let manager = CoreDataManager.instance
+    
     @Published var categoryList: [CategoryEntity] = []
     
     init() {
@@ -32,12 +33,15 @@ class CoreDataRelationshipViewModel: ObservableObject {
     func addCategory() {
         
         let newCategory = CategoryEntity(context: manager.context)
-        newCategory.name = "Category A"
+        newCategory.id = UUID()
+        newCategory.name = "Category ID"
         
         save()
                 
-        getCategories()
-        
+    }
+    
+    func deleteCategory(category: CategoryEntity) {
+        self.manager.context.delete(category)
     }
     
     func save() {
@@ -47,7 +51,6 @@ class CoreDataRelationshipViewModel: ObservableObject {
         
         manager.save()
     
-        
     }
     
 }
