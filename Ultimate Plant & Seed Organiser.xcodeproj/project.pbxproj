@@ -21,6 +21,9 @@
 		52DFF4F627855C62003522E8 /* CardFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F527855C62003522E8 /* CardFace.swift */; };
 		52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F727855CF5003522E8 /* FrontCardView.swift */; };
 		52DFF4FA27855D19003522E8 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F927855D19003522E8 /* BackCardView.swift */; };
+		52DFF4FF27856470003522E8 /* CoreDataRelationshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4FE27856470003522E8 /* CoreDataRelationshipViewModel.swift */; };
+		52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF500278564D4003522E8 /* CoreDataManager.swift */; };
+		52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF5022785667B003522E8 /* CoreDataContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		52DFF4F527855C62003522E8 /* CardFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFace.swift; sourceTree = "<group>"; };
 		52DFF4F727855CF5003522E8 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		52DFF4F927855D19003522E8 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		52DFF4FE27856470003522E8 /* CoreDataRelationshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRelationshipViewModel.swift; sourceTree = "<group>"; };
+		52DFF500278564D4003522E8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		52DFF5032785667B003522E8 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */,
+				52DFF4FD27856451003522E8 /* CoreData */,
 				52DFF4FB278561F7003522E8 /* Views */,
 				52DFF4F227855C07003522E8 /* CardFlip */,
 				52DFF4DC27850166003522E8 /* Assets.xcassets */,
@@ -100,9 +107,9 @@
 		52DFF4FB278561F7003522E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52DFF4DA27850165003522E8 /* CategoryListView.swift */,
 				52DFF4E827854FB2003522E8 /* AddPlantView.swift */,
 				52DFF4EA27855236003522E8 /* AddCategoryView.swift */,
-				52DFF4DA27850165003522E8 /* CategoryListView.swift */,
 				52DFF4E62785046A003522E8 /* PlantListView.swift */,
 				52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */,
 				52DFF4EC27855444003522E8 /* SearchPlantView.swift */,
@@ -119,6 +126,16 @@
 				52DFF4F527855C62003522E8 /* CardFace.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		52DFF4FD27856451003522E8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF4FE27856470003522E8 /* CoreDataRelationshipViewModel.swift */,
+				52DFF500278564D4003522E8 /* CoreDataManager.swift */,
+				52DFF5022785667B003522E8 /* CoreDataContainer.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +211,8 @@
 				52DFF4FA27855D19003522E8 /* BackCardView.swift in Sources */,
 				52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */,
 				52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */,
+				52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */,
+				52DFF4FF27856470003522E8 /* CoreDataRelationshipViewModel.swift in Sources */,
 				52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */,
 				52DFF4F627855C62003522E8 /* CardFace.swift in Sources */,
 				52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */,
@@ -202,6 +221,7 @@
 				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
 				52DFF4E72785046A003522E8 /* PlantListView.swift in Sources */,
 				52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */,
+				52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */,
 				52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52DFF5022785667B003522E8 /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52DFF5032785667B003522E8 /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = 52DFF5032785667B003522E8 /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52DFF4CD27850165003522E8 /* Project object */;
 }

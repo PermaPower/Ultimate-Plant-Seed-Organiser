@@ -9,19 +9,19 @@ import SwiftUI
 
 struct CategoryListView: View {
     
-    let testcategoryList = ["Category A","Category B"]
-    
+    @StateObject var vm = CoreDataRelationshipViewModel()
+            
     @State var isAddPresented = false
     
     var body: some View {
         NavigationView{
             
             List {
-                ForEach(testcategoryList, id: \.self) { cat in
+                ForEach(vm.categoryList, id: \.self) { cat in
                     NavigationLink {
                         PlantListView()
                     } label: {
-                        Text(cat)
+                        Text(cat.name ?? "")
                     }
                 }
                 .onDelete(perform: delete)
@@ -45,12 +45,13 @@ struct CategoryListView: View {
     }
     
     func delete(at offsets: IndexSet) {
-        //  testcategoryList.remove(atOffsets: offsets)
+        vm.categoryList.remove(atOffsets: offsets)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-            CategoryListView()
+                
+        CategoryListView()
     }
 }

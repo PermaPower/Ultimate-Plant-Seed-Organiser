@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct AddPlantView: View {
+    
+    @StateObject var vm = CoreDataRelationshipViewModel()
+    
     var body: some View {
-        Text("Add Plant View")
+        NavigationView {
+
+        }
+        .navigationTitle("Add Plant")
     }
 }
 
 struct AddPlantView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         AddPlantView()
+        }
     }
 }
