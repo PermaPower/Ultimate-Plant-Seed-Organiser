@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoryListView: View {
     
     @StateObject var vm = CoreDataRelationshipViewModel()
-            
+                
     @State var isAddPresented = false
     
     var body: some View {

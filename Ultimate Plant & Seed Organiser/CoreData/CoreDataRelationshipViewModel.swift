@@ -35,7 +35,9 @@ class CoreDataRelationshipViewModel: ObservableObject {
         newCategory.name = "Category A"
         
         save()
+                
         getCategories()
+        
     }
     
     func save() {
@@ -44,6 +46,8 @@ class CoreDataRelationshipViewModel: ObservableObject {
         self.manager.context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         
         manager.save()
+    
+        
     }
     
 }
