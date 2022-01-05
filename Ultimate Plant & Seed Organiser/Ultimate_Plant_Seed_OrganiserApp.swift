@@ -3,10 +3,10 @@
 import SwiftUI
 
 @main
-struct ___PACKAGENAME:identifier___App: App {
+struct Ultimate_Plant_Seed_Organiser: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CategoryListView()
         }
     }
 }

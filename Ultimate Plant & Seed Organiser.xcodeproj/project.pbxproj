@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52DFF4D927850165003522E8 /* Ultimate_Plant___Seed_OrganiserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4D827850165003522E8 /* Ultimate_Plant___Seed_OrganiserApp.swift */; };
-		52DFF4DB27850165003522E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4DA27850165003522E8 /* ContentView.swift */; };
+		52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */; };
+		52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4DA27850165003522E8 /* CategoryListView.swift */; };
 		52DFF4DD27850166003522E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DFF4DC27850166003522E8 /* Assets.xcassets */; };
 		52DFF4E027850166003522E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DFF4DF27850166003522E8 /* Preview Assets.xcassets */; };
+		52DFF4E72785046A003522E8 /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4E62785046A003522E8 /* PlantListView.swift */; };
+		52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4E827854FB2003522E8 /* AddPlantView.swift */; };
+		52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EA27855236003522E8 /* AddCategoryView.swift */; };
+		52DFF4ED27855444003522E8 /* SearchPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EC27855444003522E8 /* SearchPlantView.swift */; };
+		52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */; };
+		52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F027855BCC003522E8 /* FlipView.swift */; };
+		52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F327855C2C003522E8 /* FlipEffect.swift */; };
+		52DFF4F627855C62003522E8 /* CardFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F527855C62003522E8 /* CardFace.swift */; };
+		52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F727855CF5003522E8 /* FrontCardView.swift */; };
+		52DFF4FA27855D19003522E8 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F927855D19003522E8 /* BackCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52DFF4D527850165003522E8 /* Ultimate Plant & Seed Organiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Plant & Seed Organiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52DFF4D827850165003522E8 /* Ultimate_Plant___Seed_OrganiserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ultimate_Plant___Seed_OrganiserApp.swift"; sourceTree = "<group>"; };
-		52DFF4DA27850165003522E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Plant_Seed_OrganiserApp.swift; sourceTree = "<group>"; };
+		52DFF4DA27850165003522E8 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		52DFF4DC27850166003522E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DFF4DF27850166003522E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52DFF4E62785046A003522E8 /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
+		52DFF4E827854FB2003522E8 /* AddPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantView.swift; sourceTree = "<group>"; };
+		52DFF4EA27855236003522E8 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		52DFF4EC27855444003522E8 /* SearchPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantView.swift; sourceTree = "<group>"; };
+		52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardFlipView.swift; sourceTree = "<group>"; };
+		52DFF4F027855BCC003522E8 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		52DFF4F327855C2C003522E8 /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
+		52DFF4F527855C62003522E8 /* CardFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFace.swift; sourceTree = "<group>"; };
+		52DFF4F727855CF5003522E8 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
+		52DFF4F927855D19003522E8 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +71,9 @@
 		52DFF4D727850165003522E8 /* Ultimate Plant & Seed Organiser */ = {
 			isa = PBXGroup;
 			children = (
-				52DFF4D827850165003522E8 /* Ultimate_Plant___Seed_OrganiserApp.swift */,
-				52DFF4DA27850165003522E8 /* ContentView.swift */,
+				52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */,
+				52DFF4FB278561F7003522E8 /* Views */,
+				52DFF4F227855C07003522E8 /* CardFlip */,
 				52DFF4DC27850166003522E8 /* Assets.xcassets */,
 				52DFF4DE27850166003522E8 /* Preview Content */,
 			);
@@ -65,6 +86,39 @@
 				52DFF4DF27850166003522E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52DFF4F227855C07003522E8 /* CardFlip */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF4F027855BCC003522E8 /* FlipView.swift */,
+				52DFF4F327855C2C003522E8 /* FlipEffect.swift */,
+			);
+			path = CardFlip;
+			sourceTree = "<group>";
+		};
+		52DFF4FB278561F7003522E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF4E827854FB2003522E8 /* AddPlantView.swift */,
+				52DFF4EA27855236003522E8 /* AddCategoryView.swift */,
+				52DFF4DA27850165003522E8 /* CategoryListView.swift */,
+				52DFF4E62785046A003522E8 /* PlantListView.swift */,
+				52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */,
+				52DFF4EC27855444003522E8 /* SearchPlantView.swift */,
+				52DFF4FC27856244003522E8 /* Card */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52DFF4FC27856244003522E8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF4F727855CF5003522E8 /* FrontCardView.swift */,
+				52DFF4F927855D19003522E8 /* BackCardView.swift */,
+				52DFF4F527855C62003522E8 /* CardFace.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DFF4DB27850165003522E8 /* ContentView.swift in Sources */,
-				52DFF4D927850165003522E8 /* Ultimate_Plant___Seed_OrganiserApp.swift in Sources */,
+				52DFF4FA27855D19003522E8 /* BackCardView.swift in Sources */,
+				52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */,
+				52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */,
+				52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */,
+				52DFF4F627855C62003522E8 /* CardFace.swift in Sources */,
+				52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */,
+				52DFF4ED27855444003522E8 /* SearchPlantView.swift in Sources */,
+				52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */,
+				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
+				52DFF4E72785046A003522E8 /* PlantListView.swift in Sources */,
+				52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */,
+				52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
