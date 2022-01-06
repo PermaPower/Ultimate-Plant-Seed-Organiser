@@ -16,43 +16,42 @@ struct SearchCategoryView: View {
     
     var body: some View {
         NavigationView {
+            
             VStack{
-                TextField("Search Name", text: $sText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-                    .onAppear(perform: {sText = ""})
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text("Search")
+                HStack{
+                    TextField("Search Name", text: $sText)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.leading)
+                        .onAppear(perform: {sText = ""})
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("\(Image(systemName: "magnifyingglass"))")
+                            .padding(.trailing)
+                    }}
+            }
+            .navigationTitle("Search Category")
+            
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    Button(action: {
+                        sText = ""
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("\(Image(systemName: "text.badge.minus"))")
+                    }
                 }
-                
-                Button {
-                    sText = ""
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text("Reset")
-                }
-                
-                Button {
-                    sText = ""
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text("Cancel")
-                }
-                
             }
         }
-        .navigationTitle("Search Category")
     }
 }
+
 
 struct SearchCategoryView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        NavigationView{
-            SearchCategoryView(sText: .constant("C"))
-        }
+        SearchCategoryView(sText: .constant("Search Key World"))
     }
 }

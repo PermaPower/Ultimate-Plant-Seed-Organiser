@@ -17,32 +17,41 @@ struct AddCategoryView: View {
 
     var body: some View {
         NavigationView {
-            VStack{
+            
+            HStack{
                 TextField("Enter Category Name", text: $categoryName)
                     .textFieldStyle(.roundedBorder)
-                    .padding()
-            Button {
-                vm.addCategory(categoryName: categoryName)
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("Add Category")
-            }
+                    .padding(.leading)
+                    .onAppear(perform: {categoryName = ""})
+                Button {
+                    vm.addCategory(categoryName: categoryName)
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("\(Image(systemName: "plus"))")
+                        .padding(.trailing)
+                }
             
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("Cancel")
+            .navigationTitle("Add Category")
+                
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("\(Image(systemName: "xmark"))")
+                        
+                    }
+                }
             }
             }
         }
-        .navigationTitle("Add Category")
+        
     }
 }
 
 struct AddCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
         AddCategoryView()
-        }
     }
 }

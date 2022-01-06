@@ -43,7 +43,7 @@ struct CategoryListView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
-                    Button("Add") {
+                    Button("\(Image(systemName: "plus"))") {
                         self.isAddPresented = true
                     }
                     .sheet(isPresented: $isAddPresented,
@@ -55,9 +55,10 @@ struct CategoryListView: View {
                     }
                     
                     
-                    Button("Search") {
+                    Button("\(Image(systemName: "magnifyingglass"))") {
                         self.isSearchPresented = true
                     }
+                    
                     .sheet(isPresented: $isSearchPresented,
                            onDismiss: {
                         self.isSearchPresented = false
@@ -72,14 +73,27 @@ struct CategoryListView: View {
                     }) {
                         SearchCategoryView(sText: $sText)
                     }
-                    
+
                     EditButton()
+                       
                 }
             }
         }
     }
     
     
+}
+
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+        
+            .background(Color.blue)
+            .foregroundColor(.white)
+        
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
