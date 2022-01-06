@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CategoryListView: View {
     
+    @Environment(\.editMode) private var editMode
+    
     @StateObject var vm = CoreDataRelationshipViewModel()
     
     @State var isAddPresented = false
@@ -17,7 +19,7 @@ struct CategoryListView: View {
     @State var configuration: Bool
     
     @State var sText: String
-        
+    
     var body: some View {
         
         NavigationView{
@@ -31,10 +33,10 @@ struct CategoryListView: View {
                             
                             Button("\(Image(systemName: "plus"))") {
                                 self.isAddPresented = true
-                            
+                                
                             }
                             .sheet(isPresented: $isAddPresented,
-                                    onDismiss: {
+                                   onDismiss: {
                                 self.isAddPresented = false
                                 self.sText = ""
                                 vm.getCategories()
@@ -55,12 +57,16 @@ struct CategoryListView: View {
                         }
                     }
                     .onDelete(perform: { indexSet in
+                        
                         indexSet.forEach { index in
                             let c = vm.categoryList[index]
                             vm.deleteCategory(category: c)
                             vm.getCategories()
+                            
                         }
                     })
+                    .deleteDisabled(sText != "")
+                    
                 }
                 
                 .navigationTitle("Plant Category")
@@ -72,7 +78,7 @@ struct CategoryListView: View {
                             self.isAddPresented = true
                             
                         }
-
+                        
                         .sheet(isPresented: $isAddPresented,
                                onDismiss: {
                             self.isAddPresented = false
@@ -90,7 +96,7 @@ struct CategoryListView: View {
                         .sheet(isPresented: $isSearchPresented,
                                onDismiss: {
                             self.isSearchPresented = false
-
+                            
                             if sText != "" {
                                 vm.searchCategories(nameString: sText)
                             }
@@ -105,7 +111,7 @@ struct CategoryListView: View {
                         
                         .buttonStyle(CustomStyleForSearchButton(disabled: sText==""))
                         
-
+                        
                         EditButton()
                             .disabled(sText != "")
                         
@@ -115,8 +121,6 @@ struct CategoryListView: View {
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
