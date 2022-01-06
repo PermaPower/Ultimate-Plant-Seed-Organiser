@@ -12,6 +12,7 @@ struct CategoryListView: View {
     @StateObject var vm = CoreDataRelationshipViewModel()
         
     @State var isAddPresented = false
+    @State var isSearchPresented = false
     
     var body: some View {
         NavigationView{
@@ -48,6 +49,18 @@ struct CategoryListView: View {
                     }) {
                         AddCategoryView()
                     }
+                    
+                    Button("Search") {
+                        self.isSearchPresented = true
+                    }
+                    .sheet(isPresented: $isSearchPresented,
+                           onDismiss: {
+                        self.isSearchPresented = false
+                        vm.getCategories()
+                    }) {
+                        SearchCategoryView()
+                    }
+                    
                     EditButton()
                 }
             }
