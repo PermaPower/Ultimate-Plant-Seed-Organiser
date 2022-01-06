@@ -31,6 +31,23 @@ class CoreDataRelationshipViewModel: ObservableObject {
         
     }
     
+    func searchCategories(nameString: String) {
+        
+        let commitPredicate = NSPredicate(format: "name CONTAINS[cd] %@", nameString)
+        
+        let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
+        
+        request.predicate = commitPredicate
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        do {
+            categoryList = try manager.context.fetch(request)
+        }  catch let error {
+            print("Error fetching Core Data. \(error.localizedDescription)")
+        }
+        
+    }
+    
     func addCategory(categoryName: String) {
         
         let newCategory = CategoryEntity(context: manager.context)

@@ -10,14 +10,17 @@ import SwiftUI
 struct CategoryListView: View {
     
     @StateObject var vm = CoreDataRelationshipViewModel()
-        
+    
     @State var isAddPresented = false
     @State var isSearchPresented = false
+    
+    @State var sText: String
     
     var body: some View {
         NavigationView{
             
             List {
+                
                 ForEach(vm.categoryList, id: \.id) { cat in
                     NavigationLink {
                         PlantListView()
@@ -32,7 +35,8 @@ struct CategoryListView: View {
                         vm.getCategories()
                     }
                 })
-               
+                
+                
             }
             .navigationTitle("Category")
             
@@ -50,15 +54,23 @@ struct CategoryListView: View {
                         AddCategoryView()
                     }
                     
+                    
                     Button("Search") {
                         self.isSearchPresented = true
                     }
                     .sheet(isPresented: $isSearchPresented,
                            onDismiss: {
                         self.isSearchPresented = false
-                        vm.getCategories()
+                        if sText != "" {
+                            vm.searchCategories(nameString: sText)
+                        }
+                        else
+                        {
+                            vm.getCategories()
+                        }
+                        
                     }) {
-                        SearchCategoryView()
+                        SearchCategoryView(sText: $sText)
                     }
                     
                     EditButton()
@@ -67,12 +79,12 @@ struct CategoryListView: View {
         }
     }
     
-   
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-                
-        CategoryListView()
+        
+        CategoryListView(sText: "")
     }
 }
