@@ -17,22 +17,26 @@ struct CategoryListView: View {
     @State var configuration: Bool
     
     @State var sText: String
-    
+        
     var body: some View {
         
         NavigationView{
             
             if vm.categoryList.count == 0 {
                 Text("Add a plant category")
+                
                     .navigationBarTitle("Plant Category")
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             
                             Button("\(Image(systemName: "plus"))") {
                                 self.isAddPresented = true
-                            }.sheet(isPresented: $isAddPresented,
+                            
+                            }
+                            .sheet(isPresented: $isAddPresented,
                                     onDismiss: {
                                 self.isAddPresented = false
+                                self.sText = ""
                                 vm.getCategories()
                             }) {
                                 AddCategoryView()
@@ -66,7 +70,9 @@ struct CategoryListView: View {
                         
                         Button("\(Image(systemName: "plus"))") {
                             self.isAddPresented = true
+                            
                         }
+
                         .sheet(isPresented: $isAddPresented,
                                onDismiss: {
                             self.isAddPresented = false
@@ -77,12 +83,14 @@ struct CategoryListView: View {
                         
                         
                         Button("\(Image(systemName: "magnifyingglass"))") {
+                            self.sText = ""
                             self.isSearchPresented = true
                         }
                         
                         .sheet(isPresented: $isSearchPresented,
                                onDismiss: {
                             self.isSearchPresented = false
+
                             if sText != "" {
                                 vm.searchCategories(nameString: sText)
                             }
@@ -95,12 +103,24 @@ struct CategoryListView: View {
                             SearchCategoryView(sText: $sText)
                         }
                         
+                        .buttonStyle(CustomStyleForSearchButton(disabled: sText==""))
+                        
+
                         EditButton()
                         
                     }
                 }
             }
         }
+    }
+}
+
+struct CustomStyleForSearchButton: ButtonStyle {
+    var disabled = false
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+        .foregroundColor(disabled ? .blue : .red)
+        
     }
 }
 

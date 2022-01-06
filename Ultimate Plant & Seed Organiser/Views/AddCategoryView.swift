@@ -14,7 +14,7 @@ struct AddCategoryView: View {
     @ObservedObject var vm = CoreDataRelationshipViewModel()
     
     @State var categoryName: String = ""
-
+    
     var body: some View {
         NavigationView {
             
@@ -33,6 +33,8 @@ struct AddCategoryView: View {
             
             .navigationTitle("Add Category")
                 
+                
+                
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
@@ -49,6 +51,9 @@ struct AddCategoryView: View {
         
     }
 }
+
+
+
 
 struct AddCategoryView_Previews: PreviewProvider {
     static var previews: some View {

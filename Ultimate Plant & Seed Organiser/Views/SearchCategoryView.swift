@@ -13,7 +13,7 @@ struct SearchCategoryView: View {
     @ObservedObject var vm = CoreDataRelationshipViewModel()
     
     @Binding var sText: String
-    
+            
     var body: some View {
         NavigationView {
             
