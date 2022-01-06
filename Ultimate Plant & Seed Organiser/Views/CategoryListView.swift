@@ -23,22 +23,22 @@ struct CategoryListView: View {
         NavigationView{
             
             if vm.categoryList.count == 0 {
-                Text("Add your first category")
-                    .navigationTitle("Category")
+                Text("Add a plant category")
+                    .navigationBarTitle("Plant Category")
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             
                             Button("\(Image(systemName: "plus"))") {
                                 self.isAddPresented = true
-                            }
-                            .sheet(isPresented: $isAddPresented,
-                                   onDismiss: {
+                            }.sheet(isPresented: $isAddPresented,
+                                    onDismiss: {
                                 self.isAddPresented = false
                                 vm.getCategories()
                             }) {
                                 AddCategoryView()
                             }
-                        }}
+                        }
+                    }
             } else {
                 
                 List {
@@ -59,7 +59,7 @@ struct CategoryListView: View {
                     })
                 }
                 
-                .navigationTitle("Category")
+                .navigationTitle("Plant Category")
                 
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
