@@ -19,76 +19,89 @@ struct CategoryListView: View {
     @State var sText: String
     
     var body: some View {
+        
         NavigationView{
             
-            List {
+            if vm.categoryList.count == 0 {
+                Text("Add your first category")
+                    .navigationTitle("Category")
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            
+                            Button("\(Image(systemName: "plus"))") {
+                                self.isAddPresented = true
+                            }
+                            .sheet(isPresented: $isAddPresented,
+                                   onDismiss: {
+                                self.isAddPresented = false
+                                vm.getCategories()
+                            }) {
+                                AddCategoryView()
+                            }
+                        }}
+            } else {
                 
-                ForEach(vm.categoryList, id: \.id) { cat in
-                    NavigationLink {
-                        PlantListView()
-                    } label: {
-                        Text(cat.name ?? "")
-                    }
-                }
-                .onDelete(perform: { indexSet in
-                    indexSet.forEach { index in
-                        let c = vm.categoryList[index]
-                        vm.deleteCategory(category: c)
-                        vm.getCategories()
-                    }
-                })
-            }
-            
-            .navigationTitle("Category")
-            
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                List {
                     
-                    Button("\(Image(systemName: "plus"))") {
-                        self.isAddPresented = true
-                    }
-                    .sheet(isPresented: $isAddPresented,
-                           onDismiss: {
-                        self.isAddPresented = false
-                        vm.getCategories()
-                    }) {
-                        AddCategoryView()
-                    }
-                    
-                    
-                    Button("\(Image(systemName: "magnifyingglass"))") {
-                        self.isSearchPresented = true
-                    }
-                    
-                    .sheet(isPresented: $isSearchPresented,
-                           onDismiss: {
-                        self.isSearchPresented = false
-                        if sText != "" {
-                            vm.searchCategories(nameString: sText)
+                    ForEach(vm.categoryList, id: \.id) { cat in
+                        NavigationLink {
+                            PlantListView()
+                        } label: {
+                            Text(cat.name ?? "")
                         }
-                        else
-                        {
+                    }
+                    .onDelete(perform: { indexSet in
+                        indexSet.forEach { index in
+                            let c = vm.categoryList[index]
+                            vm.deleteCategory(category: c)
                             vm.getCategories()
                         }
+                    })
+                }
+                
+                .navigationTitle("Category")
+                
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
                         
-                    }) {
-                        SearchCategoryView(sText: $sText)
+                        Button("\(Image(systemName: "plus"))") {
+                            self.isAddPresented = true
+                        }
+                        .sheet(isPresented: $isAddPresented,
+                               onDismiss: {
+                            self.isAddPresented = false
+                            vm.getCategories()
+                        }) {
+                            AddCategoryView()
+                        }
+                        
+                        
+                        Button("\(Image(systemName: "magnifyingglass"))") {
+                            self.isSearchPresented = true
+                        }
+                        
+                        .sheet(isPresented: $isSearchPresented,
+                               onDismiss: {
+                            self.isSearchPresented = false
+                            if sText != "" {
+                                vm.searchCategories(nameString: sText)
+                            }
+                            else
+                            {
+                                vm.getCategories()
+                            }
+                            
+                        }) {
+                            SearchCategoryView(sText: $sText)
+                        }
+                        
+                        EditButton()
+                        
                     }
-                    
-
-                    EditButton()
-                       
-                    
-                   
-
-                    
-                       
                 }
             }
         }
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
