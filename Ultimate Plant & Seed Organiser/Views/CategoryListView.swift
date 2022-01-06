@@ -14,6 +14,8 @@ struct CategoryListView: View {
     @State var isAddPresented = false
     @State var isSearchPresented = false
     
+    @State var configuration: Bool
+    
     @State var sText: String
     
     var body: some View {
@@ -35,9 +37,8 @@ struct CategoryListView: View {
                         vm.getCategories()
                     }
                 })
-                
-                
             }
+            
             .navigationTitle("Category")
             
             .toolbar {
@@ -73,8 +74,14 @@ struct CategoryListView: View {
                     }) {
                         SearchCategoryView(sText: $sText)
                     }
+                    
 
                     EditButton()
+                       
+                    
+                   
+
+                    
                        
                 }
             }
@@ -84,21 +91,9 @@ struct CategoryListView: View {
     
 }
 
-struct GrowingButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-        
-            .background(Color.blue)
-            .foregroundColor(.white)
-        
-            .scaleEffect(configuration.isPressed ? 1.2 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        CategoryListView(sText: "")
+        CategoryListView(configuration: true, sText: "")
     }
 }

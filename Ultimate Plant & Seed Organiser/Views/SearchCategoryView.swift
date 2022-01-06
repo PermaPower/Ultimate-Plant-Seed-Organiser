@@ -39,7 +39,7 @@ struct SearchCategoryView: View {
                         sText = ""
                         presentationMode.wrappedValue.dismiss()
                     }) {
-                        Text("\(Image(systemName: "text.badge.minus"))")
+                        Text("\(Image(systemName: "xmark"))")
                     }
                 }
             }

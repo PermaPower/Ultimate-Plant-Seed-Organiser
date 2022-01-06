@@ -11,7 +11,7 @@ struct Ultimate_Plant_Seed_Organiser: App {
     
     var body: some Scene {
         WindowGroup {
-            CategoryListView(sText: "")
+            CategoryListView(configuration: true, sText: "")
         }
         
         .onChange(of: scenePhase) { _ in
