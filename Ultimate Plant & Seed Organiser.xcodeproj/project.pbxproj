@@ -25,6 +25,7 @@
 		52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF500278564D4003522E8 /* CoreDataManager.swift */; };
 		52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF5022785667B003522E8 /* CoreDataContainer.xcdatamodeld */; };
 		52DFF50827868743003522E8 /* SearchCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF50727868743003522E8 /* SearchCategoryView.swift */; };
+		52DFF50B2786F034003522E8 /* CustomStyleForSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF50A2786F034003522E8 /* CustomStyleForSearchButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		52DFF500278564D4003522E8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		52DFF5032785667B003522E8 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
 		52DFF50727868743003522E8 /* SearchCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryView.swift; sourceTree = "<group>"; };
+		52DFF50A2786F034003522E8 /* CustomStyleForSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyleForSearchButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,17 @@
 				52DFF4FE27856470003522E8 /* CoreDataRelationshipViewModel.swift */,
 				52DFF500278564D4003522E8 /* CoreDataManager.swift */,
 				52DFF5022785667B003522E8 /* CoreDataContainer.xcdatamodeld */,
+				52DFF5092786F01A003522E8 /* Style */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		52DFF5092786F01A003522E8 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF50A2786F034003522E8 /* CustomStyleForSearchButton.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 				52DFF4FA27855D19003522E8 /* BackCardView.swift in Sources */,
 				52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */,
 				52DFF50827868743003522E8 /* SearchCategoryView.swift in Sources */,
+				52DFF50B2786F034003522E8 /* CustomStyleForSearchButton.swift in Sources */,
 				52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */,
 				52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */,
 				52DFF4FF27856470003522E8 /* CoreDataRelationshipViewModel.swift in Sources */,

@@ -107,6 +107,7 @@ struct CategoryListView: View {
                         
 
                         EditButton()
+                            .disabled(sText != "")
                         
                     }
                 }
@@ -115,14 +116,7 @@ struct CategoryListView: View {
     }
 }
 
-struct CustomStyleForSearchButton: ButtonStyle {
-    var disabled = false
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-        .foregroundColor(disabled ? .blue : .red)
-        
-    }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
