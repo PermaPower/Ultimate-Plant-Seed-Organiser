@@ -94,8 +94,10 @@ struct EmptyModifier: ViewModifier {
         Group {
             if isEmpty {
                 Text("\(Image(systemName: "exclamationmark.circle"))")
+                    .foregroundColor(.red)
             } else {
                 Text("\(Image(systemName: "checkmark.circle"))")
+                    .foregroundColor(.green)
             }
         }
     }
