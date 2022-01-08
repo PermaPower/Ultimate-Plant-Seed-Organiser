@@ -11,10 +11,7 @@
 		52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4DA27850165003522E8 /* CategoryListView.swift */; };
 		52DFF4DD27850166003522E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DFF4DC27850166003522E8 /* Assets.xcassets */; };
 		52DFF4E027850166003522E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DFF4DF27850166003522E8 /* Preview Assets.xcassets */; };
-		52DFF4E72785046A003522E8 /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4E62785046A003522E8 /* PlantListView.swift */; };
-		52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4E827854FB2003522E8 /* AddPlantView.swift */; };
 		52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EA27855236003522E8 /* AddCategoryView.swift */; };
-		52DFF4ED27855444003522E8 /* SearchPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EC27855444003522E8 /* SearchPlantView.swift */; };
 		52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */; };
 		52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F027855BCC003522E8 /* FlipView.swift */; };
 		52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4F327855C2C003522E8 /* FlipEffect.swift */; };
@@ -34,10 +31,7 @@
 		52DFF4DA27850165003522E8 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		52DFF4DC27850166003522E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DFF4DF27850166003522E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		52DFF4E62785046A003522E8 /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
-		52DFF4E827854FB2003522E8 /* AddPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantView.swift; sourceTree = "<group>"; };
 		52DFF4EA27855236003522E8 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
-		52DFF4EC27855444003522E8 /* SearchPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantView.swift; sourceTree = "<group>"; };
 		52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardFlipView.swift; sourceTree = "<group>"; };
 		52DFF4F027855BCC003522E8 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
 		52DFF4F327855C2C003522E8 /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
@@ -62,6 +56,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52092A172786FD07001F2048 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				52DFF4DA27850165003522E8 /* CategoryListView.swift */,
+				52DFF50727868743003522E8 /* SearchCategoryView.swift */,
+				52DFF4EA27855236003522E8 /* AddCategoryView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		52092A182786FD40001F2048 /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plant;
+			sourceTree = "<group>";
+		};
 		52DFF4CC27850165003522E8 = {
 			isa = PBXGroup;
 			children = (
@@ -111,13 +122,9 @@
 		52DFF4FB278561F7003522E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52DFF4DA27850165003522E8 /* CategoryListView.swift */,
-				52DFF50727868743003522E8 /* SearchCategoryView.swift */,
-				52DFF4EA27855236003522E8 /* AddCategoryView.swift */,
-				52DFF4E827854FB2003522E8 /* AddPlantView.swift */,
-				52DFF4E62785046A003522E8 /* PlantListView.swift */,
+				52092A172786FD07001F2048 /* Category */,
+				52092A182786FD40001F2048 /* Plant */,
 				52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */,
-				52DFF4EC27855444003522E8 /* SearchPlantView.swift */,
 				52DFF4FC27856244003522E8 /* Card */,
 			);
 			path = Views;
@@ -226,16 +233,13 @@
 				52DFF4F827855CF5003522E8 /* FrontCardView.swift in Sources */,
 				52DFF50827868743003522E8 /* SearchCategoryView.swift in Sources */,
 				52DFF50B2786F034003522E8 /* CustomStyleForSearchButton.swift in Sources */,
-				52DFF4E927854FB2003522E8 /* AddPlantView.swift in Sources */,
 				52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */,
 				52DFF4FF27856470003522E8 /* CoreDataRelationshipViewModel.swift in Sources */,
 				52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */,
 				52DFF4F627855C62003522E8 /* CardFace.swift in Sources */,
 				52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */,
-				52DFF4ED27855444003522E8 /* SearchPlantView.swift in Sources */,
 				52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */,
 				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
-				52DFF4E72785046A003522E8 /* PlantListView.swift in Sources */,
 				52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */,
 				52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */,
 				52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */,

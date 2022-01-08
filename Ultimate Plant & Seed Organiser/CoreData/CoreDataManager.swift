@@ -27,7 +27,6 @@ class CoreDataManager {
     func save() {
         do {
             try context.save()
-            print("Saved Core Data Successfully")
         } catch let error {
             print("Error saving Core Data. \(error.localizedDescription)")
         }

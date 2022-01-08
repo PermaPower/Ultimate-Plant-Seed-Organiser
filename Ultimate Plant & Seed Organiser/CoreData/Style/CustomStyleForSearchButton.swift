@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct CustomStyleForSearchButton: ButtonStyle {
-    var disabled = false
+    
+    var status = false
+    var editStatus = false
+    
+    private var activeColor: Color {
+        if editStatus {
+            return .gray
+        } else {
+            return .blue
+        }
+    }
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-        .foregroundColor(disabled ? .blue : .red)
-        
+            .foregroundColor(status ? activeColor : .red)
     }
 }

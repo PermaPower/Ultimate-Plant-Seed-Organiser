@@ -3,7 +3,7 @@
     <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="plants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlantEntity" inverseName="category" inverseEntity="PlantEntity"/>
+        <relationship name="plants" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PlantEntity" inverseName="category" inverseEntity="PlantEntity"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>
@@ -13,7 +13,7 @@
     <entity name="PlantEntity" representedClassName="PlantEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryEntity" inverseName="plants" inverseEntity="CategoryEntity"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CategoryEntity" inverseName="plants" inverseEntity="CategoryEntity"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>
