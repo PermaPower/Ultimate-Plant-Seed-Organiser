@@ -23,7 +23,7 @@ struct SearchCategoryView: View {
             
             VStack{
                 
-                Text("Categories found: \(vm.categoryList.count)")
+               
                 
                 HStack{
                     
@@ -95,7 +95,7 @@ struct EmptyModifier: ViewModifier {
             if isEmpty {
                 Text("\(Image(systemName: "exclamationmark.circle"))")
             } else {
-                
+                Text("\(Image(systemName: "checkmark.circle"))")
             }
         }
     }
