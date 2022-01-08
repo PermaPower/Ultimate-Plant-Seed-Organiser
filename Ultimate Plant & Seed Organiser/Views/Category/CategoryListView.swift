@@ -55,8 +55,8 @@ struct CategoryListView: View {
                         
                     }
                 })
-          //      .deleteDisabled(searchNameText != "")
-            //    .deleteDisabled( editModeStatus == .active ? false : true)
+                .deleteDisabled(searchNameText != "")
+                .deleteDisabled( editModeStatus == .active ? false : true)
 
                 
             }
@@ -80,8 +80,8 @@ struct CategoryListView: View {
                     }) {
                         AddCategoryView()
                     }
-                //    .disabled(editModeStatus == .active ? true : false)
-                 //   .disabled(searchNameText != "")
+                    .disabled(editModeStatus == .active ? true : false)
+                    .disabled(searchNameText != "")
                     
                     
                     
@@ -101,20 +101,11 @@ struct CategoryListView: View {
                         SearchCategoryView(sText: $searchNameText)
                     }
                     
-                //    .disabled(editModeStatus == .active ? true : false)
-                 //   .disabled(vm.categoryList.count < 2)
-                    
-//                    .buttonStyle( CustomStyleForSearchButton(status: searchNameText == "", editStatus: editModeStatus == .active))
-//
-                   
-                    
-                    
-                    
-                    
+                    .disabled(editModeStatus == .active ? true : false)
+
                     EditButton()
-                   //     .disabled(searchNameText != "")
-                     //   .disabled(vm.categoryList.count == 0)
-                    
+                        .deleteDisabled(searchNameText != "")
+                
                 }
             }
             // track edit mode status
