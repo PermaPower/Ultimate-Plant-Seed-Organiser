@@ -15,14 +15,12 @@ struct CategoryListView: View {
     
     @State private var isAddPresented = false
     @State private var isSearchPresented = false
-    
-    @State private var isSubtitleVisible: Bool = false
-    
+        
     @State var editModeStatus: EditMode = .inactive
-
+    
     @State var searchNameText: String
     
-    // Compute if Categories Exist yet or not to show different view
+    // Compute to see if Categories Exist or not
     private var showCustomViewWhenListBlank: Bool {
         vm.categoryList.count == 0 ? true : false
     }
@@ -44,30 +42,24 @@ struct CategoryListView: View {
                         
                     }
                 }
-                            
-                
                 .onDelete(perform: { indexSet in
                     
                     indexSet.forEach { index in
                         let c = vm.categoryList[index]
                         vm.deleteCategory(category: c)
                         vm.refreshCategoryList(nameFilterString: "", entity: "CategoryEntity")
-                        
                     }
                 })
                 .deleteDisabled(searchNameText != "")
                 .deleteDisabled( editModeStatus == .active ? false : true)
-
                 
             }
-            
-            
             .navigationTitle("\(navigationBarTitle)")
-            
-           
-            
+               
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
+                    // Add Button
                     
                     Button("\(Image(systemName: "plus"))") {
                         self.isAddPresented = true
@@ -82,17 +74,15 @@ struct CategoryListView: View {
                     }
                     .disabled(editModeStatus == .active ? true : false)
                     .disabled(searchNameText != "")
-                    
-                    
+
+                    // Search Button
                     
                     Button("\(Image(systemName: "magnifyingglass"))") {
                         self.isSearchPresented = true
                     }
-                    
                     .sheet(isPresented: $isSearchPresented,
                            onDismiss: {
-                                                
-                       
+                        
                         vm.refreshCategoryList(nameFilterString: searchNameText, entity: "CategoryEntity")
                         
                         self.isSearchPresented = false
@@ -100,26 +90,29 @@ struct CategoryListView: View {
                     }) {
                         SearchCategoryView(sText: $searchNameText)
                     }
-                    
                     .disabled(editModeStatus == .active ? true : false)
-
+                    
                     EditButton()
                         .deleteDisabled(searchNameText != "")
-                
+                        .disabled(searchNameText != "")
                 }
             }
-            // track edit mode status
+            
+            // Track Edit Mode Status
+
             .environment(\.editMode, $editModeStatus)
             
+            // Show Custom View if no Categories exist
+            
             .if(showCustomViewWhenListBlank) { view in
-
+                
                 Text("No Plant Categories Yet")
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
-
+                            
                             Button("\(Image(systemName: "plus"))") {
                                 self.isAddPresented = true
-
+                                
                             }
                             .sheet(isPresented: $isAddPresented,
                                    onDismiss: {
@@ -131,9 +124,6 @@ struct CategoryListView: View {
                         }
                     }
             }
-            
-            
-            
         }
     }
 }

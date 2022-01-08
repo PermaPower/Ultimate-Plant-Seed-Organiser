@@ -14,7 +14,6 @@ struct SearchCategoryView: View {
     
     @State private var showAlertIcon =  true
     
-    
     @Binding var sText: String
     
     
@@ -39,11 +38,7 @@ struct SearchCategoryView: View {
                                 }
                                 
                             }
-                            
-                            
-                            
-                            
-                            
+
                             TextField("Search Name", text: $sText)
                             
                                 .textFieldStyle(.roundedBorder)
