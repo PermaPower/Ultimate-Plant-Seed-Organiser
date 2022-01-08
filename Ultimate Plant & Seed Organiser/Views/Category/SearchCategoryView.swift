@@ -22,6 +22,9 @@ struct SearchCategoryView: View {
         NavigationView {
             
             VStack{
+                
+                Text("Categories found: \(vm.categoryList.count)")
+                
                 HStack{
                     
                     HStack {
@@ -38,7 +41,6 @@ struct SearchCategoryView: View {
                                 }
                                 
                             }
-
                             TextField("Search Name", text: $sText)
                             
                                 .textFieldStyle(.roundedBorder)
@@ -46,6 +48,7 @@ struct SearchCategoryView: View {
                                 .onChange(of: sText) { newValue in
                                     vm.refreshCategoryList(nameFilterString: sText, entity: "CategoryEntity")
                                 }
+                            
                             
                             
                         }
