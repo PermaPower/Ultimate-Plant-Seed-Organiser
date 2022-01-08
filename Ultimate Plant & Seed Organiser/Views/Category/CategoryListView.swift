@@ -36,7 +36,7 @@ struct CategoryListView: View {
                 ForEach(vm.categoryList, id: \.id) { cat in
                     
                     NavigationLink {
-                        //   PlantListView(sText: "")
+                        PlantCardFlipView()
                     } label: {
                         Text(cat.name ?? "")
                         

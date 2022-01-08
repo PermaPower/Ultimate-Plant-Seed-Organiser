@@ -16,9 +16,12 @@ struct PlantCardFlipView : View {
     
     var body : some View {
         
-        let front = CardFace(text: sample1, background: Color.yellow)
-        let back = CardFace(text: sample2, background: Color.green)
+      //  let front = CardFace(text: sample1, background: Color.yellow)
+      //  let back = CardFace(text: sample2, background: Color.green)
         
+        let front = CardTag()
+        let back = CardTag()
+   
         VStack() {
             Spacer()
             FlipView(front: front, back: back, showBack: $showBack)
@@ -41,10 +44,6 @@ struct PlantCardFlipView : View {
         }
         .navigationTitle("Plant Card View")
     }
-    
-    func delete(at offsets: IndexSet) {
-      //  testcategoryList.remove(atOffsets: offsets)
-        }
     
 }
 
