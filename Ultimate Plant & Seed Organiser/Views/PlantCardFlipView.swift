@@ -10,17 +10,11 @@ import SwiftUI
 struct PlantCardFlipView : View {
     
     @State var showBack = false
-    
-    let sample1 = "If you know you have an unpleasant nature and dislike people, this is no obstacle to work."
-    let sample2 = "One thing is for sure – a sheep is not a creature of the air."
-    
+
     var body : some View {
         
-      //  let front = CardFace(text: sample1, background: Color.yellow)
-      //  let back = CardFace(text: sample2, background: Color.green)
-        
-        let front = CardTag()
-        let back = CardTag()
+        let front = CardTagFront()
+        let back = CardTagBack()
    
         VStack() {
             Spacer()

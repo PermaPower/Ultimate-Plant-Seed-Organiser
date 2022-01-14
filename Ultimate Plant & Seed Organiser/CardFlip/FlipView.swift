@@ -25,11 +25,11 @@ struct FlipView<SomeTypeOfViewA : View, SomeTypeOfViewB : View> : View {
                 back.opacity(flipped ? 1.0 : 0.0)
             }
             .modifier(FlipEffect(flipped: $flipped, angle: showBack ? 180 : 0, axis: (x: 0, y: 1)))
-            .onTapGesture {
-                withAnimation(Animation.linear(duration: 0.1)) {
-                    self.showBack.toggle()
-                }
-            }
+//            .onTapGesture {
+//                withAnimation(Animation.linear(duration: 0.1)) {
+//                    self.showBack.toggle()
+//                }
+//            }
             Spacer()
         }
     }
