@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52261F1E27893AA9001B48BE /* CardTagFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52261F1D27893AA9001B48BE /* CardTagFront.swift */; };
+		520F6F73279234E200039101 /* TagFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F72279234E200039101 /* TagFront.swift */; };
+		520F6F75279242DE00039101 /* TagBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F74279242DE00039101 /* TagBack.swift */; };
 		52453BDF278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */; };
-		52453BE1278A4404007FA16B /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52453BE0278A4404007FA16B /* TrackableScrollView.swift */; };
-		52453BE3278A4997007FA16B /* scrollTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52453BE2278A4997007FA16B /* scrollTrack.swift */; };
-		526AE6EB27922AD300A3556D /* CardTagBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526AE6EA27922AD300A3556D /* CardTagBack.swift */; };
 		526AE6F127922DF800A3556D /* PlantTagShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526AE6F027922DF800A3556D /* PlantTagShape.swift */; };
 		52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */; };
 		52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4DA27850165003522E8 /* CategoryListView.swift */; };
@@ -29,11 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52261F1D27893AA9001B48BE /* CardTagFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTagFront.swift; sourceTree = "<group>"; };
+		520F6F72279234E200039101 /* TagFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFront.swift; sourceTree = "<group>"; };
+		520F6F74279242DE00039101 /* TagBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagBack.swift; sourceTree = "<group>"; };
 		52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
-		52453BE0278A4404007FA16B /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
-		52453BE2278A4997007FA16B /* scrollTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollTrack.swift; sourceTree = "<group>"; };
-		526AE6EA27922AD300A3556D /* CardTagBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTagBack.swift; sourceTree = "<group>"; };
 		526AE6F027922DF800A3556D /* PlantTagShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTagShape.swift; sourceTree = "<group>"; };
 		52DFF4D527850165003522E8 /* Ultimate Plant & Seed Organiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Plant & Seed Organiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Plant_Seed_OrganiserApp.swift; sourceTree = "<group>"; };
@@ -131,8 +127,8 @@
 				52092A172786FD07001F2048 /* Category */,
 				52092A182786FD40001F2048 /* Plant */,
 				52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */,
-				52261F1D27893AA9001B48BE /* CardTagFront.swift */,
-				526AE6EA27922AD300A3556D /* CardTagBack.swift */,
+				520F6F72279234E200039101 /* TagFront.swift */,
+				520F6F74279242DE00039101 /* TagBack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,8 +149,6 @@
 			children = (
 				52DFF50A2786F034003522E8 /* CustomStyleForSearchButton.swift */,
 				52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */,
-				52453BE0278A4404007FA16B /* TrackableScrollView.swift */,
-				52453BE2278A4997007FA16B /* scrollTrack.swift */,
 				526AE6F027922DF800A3556D /* PlantTagShape.swift */,
 			);
 			path = Style;
@@ -230,22 +224,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526AE6EB27922AD300A3556D /* CardTagBack.swift in Sources */,
+				520F6F75279242DE00039101 /* TagBack.swift in Sources */,
 				52DFF50827868743003522E8 /* SearchCategoryView.swift in Sources */,
 				52DFF50B2786F034003522E8 /* CustomStyleForSearchButton.swift in Sources */,
-				52453BE3278A4997007FA16B /* scrollTrack.swift in Sources */,
-				52453BE1278A4404007FA16B /* TrackableScrollView.swift in Sources */,
 				52DFF5042785667B003522E8 /* CoreDataContainer.xcdatamodeld in Sources */,
 				52DFF4FF27856470003522E8 /* CoreDataRelationshipViewModel.swift in Sources */,
 				52DFF4F427855C2C003522E8 /* FlipEffect.swift in Sources */,
 				52453BDF278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift in Sources */,
-				52261F1E27893AA9001B48BE /* CardTagFront.swift in Sources */,
 				52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */,
 				52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */,
 				526AE6F127922DF800A3556D /* PlantTagShape.swift in Sources */,
 				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
 				52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */,
 				52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */,
+				520F6F73279234E200039101 /* TagFront.swift in Sources */,
 				52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

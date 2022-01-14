@@ -13,8 +13,8 @@ struct PlantCardFlipView : View {
 
     var body : some View {
         
-        let front = CardTagFront()
-        let back = CardTagBack()
+        let front = TagFront(contentOffset: 0)
+        let back = TagBack(contentOffset: 0)
    
         VStack() {
             Spacer()
