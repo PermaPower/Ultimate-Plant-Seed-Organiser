@@ -10,16 +10,19 @@ import SwiftUI
 struct PlantCardFlipView : View {
     
     @State var showBack = false
-
+    
     var body : some View {
         
-        let front = TagFront(contentOffset: 0)
-        let back = TagBack(contentOffset: 0)
-   
-        VStack() {
-            Spacer()
-            FlipView(front: front, back: back, showBack: $showBack)
-            Spacer()
+        let front = A()
+        let back = B()
+        
+        ScrollView{
+            VStack() {
+                Spacer()
+                FlipView(front: front, back: back, showBack: $showBack)
+                Spacer()
+                
+            }
         }
         
         .toolbar {
@@ -27,8 +30,10 @@ struct PlantCardFlipView : View {
                 Button(action: { self.showBack = false }) { Text("Front")}.disabled(showBack == false)
                 Spacer()
                 Button(action: {
+                    
                     withAnimation(Animation.linear(duration: 0.4)) {
                         self.showBack.toggle()
+                        
                     }
                 }) { Text("Toggle")}
                 Spacer()
@@ -37,12 +42,14 @@ struct PlantCardFlipView : View {
             
         }
         .navigationTitle("Plant Card View")
+        
     }
-    
 }
 
 struct PlantCardFlipView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         NavigationView{
             PlantCardFlipView()
         }
