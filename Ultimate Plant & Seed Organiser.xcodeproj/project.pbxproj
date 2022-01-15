@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		520F6F73279234E200039101 /* TagFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F72279234E200039101 /* TagFront.swift */; };
-		520F6F75279242DE00039101 /* TagBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F74279242DE00039101 /* TagBack.swift */; };
 		520F6F7D279364EE00039101 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F7C279364EE00039101 /* A.swift */; };
 		520F6F7F2793650900039101 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F7E2793650900039101 /* B.swift */; };
 		52453BDF278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */; };
@@ -29,8 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		520F6F72279234E200039101 /* TagFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFront.swift; sourceTree = "<group>"; };
-		520F6F74279242DE00039101 /* TagBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagBack.swift; sourceTree = "<group>"; };
 		520F6F7C279364EE00039101 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
 		520F6F7E2793650900039101 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
 		52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
@@ -133,8 +129,6 @@
 				52DFF4EE2785559A003522E8 /* PlantCardFlipView.swift */,
 				520F6F7C279364EE00039101 /* A.swift */,
 				520F6F7E2793650900039101 /* B.swift */,
-				520F6F72279234E200039101 /* TagFront.swift */,
-				520F6F74279242DE00039101 /* TagBack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				520F6F75279242DE00039101 /* TagBack.swift in Sources */,
 				52DFF50827868743003522E8 /* SearchCategoryView.swift in Sources */,
 				52DFF50B2786F034003522E8 /* CustomStyleForSearchButton.swift in Sources */,
 				520F6F7D279364EE00039101 /* A.swift in Sources */,
@@ -245,7 +238,6 @@
 				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
 				52DFF4EF2785559A003522E8 /* PlantCardFlipView.swift in Sources */,
 				52DFF501278564D4003522E8 /* CoreDataManager.swift in Sources */,
-				520F6F73279234E200039101 /* TagFront.swift in Sources */,
 				52DFF4F127855BCC003522E8 /* FlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
