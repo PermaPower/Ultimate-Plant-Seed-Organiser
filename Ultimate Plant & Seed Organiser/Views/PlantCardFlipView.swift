@@ -10,35 +10,33 @@ import SwiftUI
 struct PlantCardFlipView : View {
     
     @State var showBack = false
-    
+
     var body : some View {
         
-        let front = A()
-        let back = B()
+        let front = A(showBack: $showBack)
+        let back = B(showBack: $showBack)
     
-        
         ScrollView{
-            FlipView(front: front, back: back, showBack: $showBack)
+           
+            FlipView(front: front, back: back, updateTagView: true, showBack: $showBack)
         }
     
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button(action: { self.showBack = false }) { Text("Front")}.disabled(showBack == false)
                 Spacer()
                 Button(action: {
                     
-                    withAnimation(Animation.linear(duration: 0.3)) {
+                    withAnimation(Animation.linear(duration: 0.35)) {
                         self.showBack.toggle()
+    
                         
                     }
-                }) { Text("Toggle")}
+                }) { showBack == true ? Text("\(Image(systemName: "info.circle"))") : Text("\(Image(systemName: "camera.circle"))")}
                 Spacer()
-                Button(action: { self.showBack = true }) { Text("Back")}.disabled(showBack == true)
             }
             
         }
         .navigationTitle("Plant Card View")
-        
     }
 }
 

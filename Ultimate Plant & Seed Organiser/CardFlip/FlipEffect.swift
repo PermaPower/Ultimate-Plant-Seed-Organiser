@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FlipEffect: GeometryEffect {
-    
+        
     var animatableData: Double {
         get { angle }
         set { angle = newValue }
     }
+    
+    @ObservedObject var progress: TagAnimationProgressAngle
     
     @Binding var flipped: Bool
     var angle: Double
@@ -25,6 +27,11 @@ struct FlipEffect: GeometryEffect {
         }
         
         let tweakedAngle = flipped ? -180 + angle : angle
+                
+        progress.angle = Int(animatableData)
+        
+     //   let _ = print(progress.score)
+
         let a = CGFloat(Angle(degrees: tweakedAngle).radians)
         
         var transform3d = CATransform3DIdentity;
@@ -39,3 +46,6 @@ struct FlipEffect: GeometryEffect {
     }
 }
 
+class TagAnimationProgressAngle: ObservableObject {
+    @Published var angle = 0
+}

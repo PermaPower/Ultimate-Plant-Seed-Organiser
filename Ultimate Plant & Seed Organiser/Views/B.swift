@@ -11,6 +11,11 @@ struct B: View {
     
     @State var textLableTitle = "B"
     @State var textLableSubTitle = "Sunny"
+        
+    @Binding var showBack : Bool
+    
+    @StateObject var progress = TagAnimationProgressAngle()
+
     
     // set tag height here
     private let tagheight:CGFloat = 850
@@ -20,13 +25,13 @@ struct B: View {
         VStack {
             ZStack{
                 
-                TagBackground()
-                    .frame(width: .infinity, height: tagheight, alignment: .center)
+                TagBackground(showBack: $showBack)
+                    .frame(width: nil, height: tagheight, alignment: .center)
                 
                 // Configure view
                 Group {
                     Text(textLableTitle)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(progress.angle != 90  ? Color.blue : Color.red)
                         .font(.custom("Georgia",  size: 40, relativeTo: .headline))
                         .padding(.bottom, 80)
                     
@@ -35,13 +40,16 @@ struct B: View {
                         .foregroundColor(Color.white)
                         .font(.custom("Georgia",  size: 20, relativeTo: .headline)).italic()
                 }
+                
             }
         }
     }
+    
+  
 }
 
 struct B_Previews: PreviewProvider {
     static var previews: some View {
-        B()
+        B(showBack: .constant(true))
     }
 }
