@@ -15,23 +15,19 @@ struct PlantCardFlipView : View {
         
         let front = A()
         let back = B()
+    
         
         ScrollView{
-            VStack() {
-                Spacer()
-                FlipView(front: front, back: back, showBack: $showBack)
-                Spacer()
-                
-            }
+            FlipView(front: front, back: back, showBack: $showBack)
         }
-        
+    
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button(action: { self.showBack = false }) { Text("Front")}.disabled(showBack == false)
                 Spacer()
                 Button(action: {
                     
-                    withAnimation(Animation.linear(duration: 0.4)) {
+                    withAnimation(Animation.linear(duration: 0.3)) {
                         self.showBack.toggle()
                         
                     }
