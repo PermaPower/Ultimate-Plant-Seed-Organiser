@@ -12,6 +12,7 @@
 		520F6F812795849200039101 /* TagBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520F6F802795849200039101 /* TagBackground.swift */; };
 		52453BDF278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */; };
 		526AE6F127922DF800A3556D /* PlantTagShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526AE6F027922DF800A3556D /* PlantTagShape.swift */; };
+		526CEA1227998B3600382D33 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CEA1127998B3600382D33 /* ImagePicker.swift */; };
 		52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */; };
 		52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFF4DA27850165003522E8 /* CategoryListView.swift */; };
 		52DFF4DD27850166003522E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DFF4DC27850166003522E8 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		520F6F802795849200039101 /* TagBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagBackground.swift; sourceTree = "<group>"; };
 		52453BDE278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
 		526AE6F027922DF800A3556D /* PlantTagShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTagShape.swift; sourceTree = "<group>"; };
+		526CEA1127998B3600382D33 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		52DFF4D527850165003522E8 /* Ultimate Plant & Seed Organiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Plant & Seed Organiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DFF4D827850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Plant_Seed_OrganiserApp.swift; sourceTree = "<group>"; };
 		52DFF4DA27850165003522E8 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				520F6F802795849200039101 /* TagBackground.swift */,
 				520F6F7C279364EE00039101 /* A.swift */,
 				520F6F7E2793650900039101 /* B.swift */,
+				526CEA1127998B3600382D33 /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				52453BDF278A43D9007FA16B /* ScrollOffsetPreferenceKey.swift in Sources */,
 				52DFF4DB27850165003522E8 /* CategoryListView.swift in Sources */,
 				52DFF4D927850165003522E8 /* Ultimate_Plant_Seed_OrganiserApp.swift in Sources */,
+				526CEA1227998B3600382D33 /* ImagePicker.swift in Sources */,
 				520F6F812795849200039101 /* TagBackground.swift in Sources */,
 				526AE6F127922DF800A3556D /* PlantTagShape.swift in Sources */,
 				52DFF4EB27855236003522E8 /* AddCategoryView.swift in Sources */,
@@ -376,6 +380,7 @@
 				DEVELOPMENT_TEAM = TS49475533;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This application requests permission to save photos to your Photo Library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -406,6 +411,7 @@
 				DEVELOPMENT_TEAM = TS49475533;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This application requests permission to save photos to your Photo Library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

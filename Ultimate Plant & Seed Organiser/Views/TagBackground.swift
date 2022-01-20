@@ -43,7 +43,7 @@ struct TagBackground: View {
                             // Centre line
                             Rectangle()
                                 .fill(
-                                    LinearGradient(gradient: Gradient(colors: [Color.tagColor, .black]), startPoint: .top, endPoint: .bottom)
+                                    LinearGradient(gradient: Gradient(colors: [Color.green, .black]), startPoint: .top, endPoint: .bottom)
                                 )
                                 .opacity(0.8)
                                 .frame(width: 1, height: 400, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -93,7 +93,7 @@ struct TagBackground: View {
             .disabled(true)
         }
         .shadow(color: Color.primary.opacity(0.2), radius: 5, x: 10, y: 0)
-        .background(Color.backgroundColor.edgesIgnoringSafeArea(.all))
+        .background(Color.white.edgesIgnoringSafeArea(.all))
     }
     
 }

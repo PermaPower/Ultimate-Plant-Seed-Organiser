@@ -16,13 +16,14 @@ struct PlantCardFlipView : View {
         let front = A(showBack: $showBack)
         let back = B(showBack: $showBack)
     
-        ScrollView{
+        ScrollView (showsIndicators: false){
            
             FlipView(front: front, back: back, updateTagView: true, showBack: $showBack)
         }
     
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
+                
                 Spacer()
                 Button(action: {
                     
